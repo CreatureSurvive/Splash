@@ -8,6 +8,6 @@
 import Foundation
 
 public struct NoGrammar: Grammar {
-    var delimiters: CharacterSet = CharacterSet()
-    var syntaxRules = [Splash.SyntaxRule]()
+    public var delimiters: CharacterSet = CharacterSet()
+    public var syntaxRules = [Splash.SyntaxRule]()
 }

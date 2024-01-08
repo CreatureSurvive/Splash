@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Splash
 
 public struct DartGrammar: Grammar {
     public var delimiters: CharacterSet
