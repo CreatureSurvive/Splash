@@ -176,6 +176,32 @@ public extension Theme {
             )
         )
     }
+    
+    /// Create a theme using Xcodes default theme supporting light and dark mode
+    @available(iOS 13.0, *)
+    static func defaultDynamic(withFont font: Splash.Font) -> Theme {
+        
+        return Theme(
+            font: font,
+            plainTextColor: Splash.Color(
+                light: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.85),
+                dark: #colorLiteral(red: 1, green: 0.9999999404, blue: 0.9999999404, alpha: 0.85)),
+            tokenColors: [
+                .keyword: Splash.Color(light: #colorLiteral(red: 0.6784297228, green: 0.2392024994, blue: 0.6431324482, alpha: 1), dark: #colorLiteral(red: 0.9999973178, green: 0.478415072, blue: 0.6980343461, alpha: 1)),
+                .string: Splash.Color(light: #colorLiteral(red: 0.8210173249, green: 0.1831091344, blue: 0.1060960516, alpha: 1), dark: #colorLiteral(red: 0.9999973178, green: 0.505867064, blue: 0.4392129183, alpha: 1)),
+                .type: Splash.Color(light: #colorLiteral(red: 0.009010463953, green: 0.3865026236, blue: 0.5487951636, alpha: 1), dark: #colorLiteral(red: 0.4196258187, green: 0.8744947314, blue: 0.9999926686, alpha: 1)),
+                .call: Splash.Color(light: #colorLiteral(red: 0.5019606352, green: 0.3097942173, blue: 0.7215626836, alpha: 1), dark: #colorLiteral(red: 0.6980397105, green: 0.505869627, blue: 0.9215611815, alpha: 1)),
+                .number: Splash.Color(light: #colorLiteral(red: 0.1524859071, green: 0.1627748609, blue: 0.846955359, alpha: 1), dark: #colorLiteral(red: 0.8509826064, green: 0.7882201076, blue: 0.4862719178, alpha: 1)),
+                .comment: Splash.Color(light: #colorLiteral(red: 0.4392194748, green: 0.4980290532, blue: 0.5490160584, alpha: 1), dark: #colorLiteral(red: 0.4980430007, green: 0.5490083694, blue: 0.5960745215, alpha: 1)),
+                .property: Splash.Color(light: #colorLiteral(red: 0.01979874074, green: 0.4877431393, blue: 0.6895453334, alpha: 1), dark: #colorLiteral(red: 0.3069736958, green: 0.6911749244, blue: 0.7984278798, alpha: 1)),
+                .dotAccess: Splash.Color(light: #colorLiteral(red: 0.2431467474, green: 0.5019516349, blue: 0.5294076204, alpha: 1), dark: #colorLiteral(red: 0.470598042, green: 0.7607708573, blue: 0.7019562721, alpha: 1)),
+                .preprocessing: Splash.Color(light: #colorLiteral(red: 0.47058779, green: 0.2862665057, blue: 0.1647058427, alpha: 1), dark: #colorLiteral(red: 0.9999982715, green: 0.6313573122, blue: 0.3098036945, alpha: 1))
+            ],
+            backgroundColor: Splash.Color(
+                light: #colorLiteral(red: 1, green: 0.9999999404, blue: 0.9999999404, alpha: 1),
+                dark: #colorLiteral(red: 0.160784781, green: 0.1647023261, blue: 0.1882338524, alpha: 1))
+        )
+    }
 }
 
 #endif
