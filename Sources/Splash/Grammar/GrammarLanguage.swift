@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct GrammarLanguage: RawRepresentable, CaseIterable, Equatable {
+public struct GrammarLanguage: RawRepresentable, CaseIterable, Equatable, Hashable {
     
     public typealias RawValue = String
     public var rawValue: String
