@@ -33,7 +33,7 @@ public struct Font {
     }
     
     /// initialize an instance with a loaded font
-    init(loaded: Loaded) {
+    public init(loaded: Loaded) {
         self.resource = .preloaded(loaded)
         self.size = loaded.pointSize
     }
