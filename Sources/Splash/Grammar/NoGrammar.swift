@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NoGrammar: Grammar {
+public struct NoGrammar: Grammar {
     var delimiters: CharacterSet = CharacterSet()
     var syntaxRules = [Splash.SyntaxRule]()
 }

@@ -22,7 +22,7 @@ public struct GrammarLanguage: RawRepresentable, CaseIterable, Equatable {
     public static let yaml: Self = .init(rawValue: "yaml")
     public static let dart: Self = .init(rawValue: "dart")
     
-    var name: String {
+    public var name: String {
         return self.rawValue
     }
 
@@ -30,7 +30,7 @@ public struct GrammarLanguage: RawRepresentable, CaseIterable, Equatable {
         self.rawValue = rawValue
     }
     
-    var grammar: Grammar {
+    public var grammar: Grammar {
         switch self {
         case .swift:
             return Self.swiftGrammar
@@ -54,7 +54,7 @@ public struct GrammarLanguage: RawRepresentable, CaseIterable, Equatable {
     }
 }
 
-extension GrammarLanguage {
+public extension GrammarLanguage {
     
     static let swiftGrammar = SwiftGrammar()
     static let noneGrammar = NoGrammar()
